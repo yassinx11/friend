@@ -33,6 +33,48 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             animation: fadeInUp 0.8s ease-out;
+            position: relative;
+        }
+
+        .social-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .instagram-btn {
+            background: linear-gradient(135deg, #E4405F, #C13584, #833AB4);
+        }
+
+        .instagram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(228, 64, 95, 0.4);
         }
 
         @keyframes fadeInUp {
@@ -230,11 +272,26 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            
+            .social-buttons {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="profile-container">
+        <div class="social-buttons">
+            <a href="https://wa.me/923356127851" class="social-btn whatsapp-btn" target="_blank" title="WhatsApp">
+                📱
+            </a>
+            <a href="https://www.instagram.com/jarr.khan_/" class="social-btn instagram-btn" target="_blank" title="Instagram">
+                📷
+            </a>
+        </div>
+        
         <div class="profile-header">
             <div class="profile-avatar">
                 MA
